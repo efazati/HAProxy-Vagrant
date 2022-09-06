@@ -1,7 +1,7 @@
 #!/bin/bash
 
-vagrant up haproxy
-vagrant up web1
-vagrant up web2
-
+vagrant status
+vagrant destroy -f 
+vagrant up 
 vagrant ssh -c "sudo systemctl restart haproxy"
+vagrant status

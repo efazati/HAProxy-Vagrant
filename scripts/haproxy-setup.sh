@@ -7,7 +7,7 @@ if [ ! -f /etc/haproxy/haproxy.cfg ]; then
   # Configure haproxy
   cp /home/vagrant/files/haproxy /etc/default/haproxy
   cp /home/vagrant/files/haproxy.cfg /etc/haproxy/haproxy.cfg
-  cp /home/vagrant/files/haproxy-setup.sh /etc/rsyslog.d/49-haproxy.conf
+  cp /home/vagrant/files/rsyslog-haproxy.conf /etc/rsyslog.d/49-haproxy.conf
 
-  systemctl restart haproxy
+  # systemctl restart haproxy
 fi

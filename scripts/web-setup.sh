@@ -5,8 +5,10 @@ if [ ! -f /var/www/html/index.html ]; then
   # Install apache
   apt -y install apache2
   cat > /var/www/html/index.html <<EOD
-<html><head><title>${HOSTNAME}</title></head><body><h1>${HOSTNAME}</h1>
+<html><head><title>${HOSTNAME}</title></head><body>
+<h1>${HOSTNAME}</h1>
 <p>This is the default web page for ${HOSTNAME}.</p>
+<img src="/logo.png" />
 </body></html>
 EOD
 

@@ -39,4 +39,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     web2_config.vm.provision :shell, :path => "scripts/web-setup.sh"
 
   end
+  config.vm.define :cdn do |cdn_config|
+
+    cdn_config.vm.hostname = 'cdn'
+    cdn_config.vm.network :private_network, ip: "192.168.56.13"
+    cdn_config.vm.provision "file", source: "files/cdn", destination: "$HOME/files"
+    cdn_config.vm.provision :shell, :path => "scripts/common.sh"
+    cdn_config.vm.provision :shell, :path => "scripts/cdn-setup.sh"
+
+  end
 end
