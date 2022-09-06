@@ -1,0 +1,18 @@
+# HAProxy - Vagrant
+The primary purpose of this project is to demonstrate HAProxy features.
+
+**Technologies:**
+- Haproxy
+- Nginx
+- Ubuntu
+- Vagrant
+
+### Run
+To run this project, use `run.sh`. and then see https://192.168.56.11
+
+Also after that you can ssh to nodes with this command `vagrant ssh haproxy`
+
+
+
+### Requirement
+The only thing that you need is Vagrant https://www.vagrantup.com/docs/installation
