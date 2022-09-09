@@ -1,0 +1,13 @@
+/var/log/haproxy-traffic.log
+/var/log/haproxy-admin.log
+{
+        rotate 2
+        size=50M
+        missingok
+        notifempty
+        compress
+        delaycompress
+        postrotate
+                [ ! -x /usr/lib/rsyslog/rsyslog-rotate ] || /usr/lib/rsyslog/rsyslog-rotate
+        endscript
+}
