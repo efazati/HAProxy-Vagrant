@@ -3,5 +3,5 @@
 vagrant status
 vagrant destroy -f 
 vagrant up 
-vagrant ssh -c "sudo systemctl restart haproxy"
+vagrant ssh haproxy -c "sudo systemctl restart haproxy"
 vagrant status
