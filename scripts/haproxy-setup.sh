@@ -35,9 +35,9 @@ EOF
   sudo bash -c "cat ${HOST}.key ${HOST}.crt >> /etc/ssl/private/${HOST}.pem"
 
   # Specify PEM in haproxy config
-  sudo vim /etc/haproxy/haproxy.cfg
-  listen haproxy
-    bind 0.0.0.0:443 ssl crt /etc/ssl/private/mydomain.pem
+  # sudo vim /etc/haproxy/haproxy.cfg
+  # listen haproxy
+  #   bind 0.0.0.0:443 ssl crt /etc/ssl/private/mydomain.pem
 
   # Configure haproxy
   cp /home/vagrant/files/haproxy /etc/default/haproxy
